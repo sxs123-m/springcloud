@@ -1,0 +1,14 @@
+server:
+  port: 10000 # 配置服务端口
+spring:
+  application:
+    name: member-service-provider-10000 # 配置服务的名称，名字任意这里与项目名保持一致
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    # 别忘记创建数据库之后修改数据库名称
+    url: jdbc:mysql://localhost:3306/xxx?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # 扫描所有Mapper.xml
+  type-aliases-package: com.sun.springcloud.entity # 扫描所有实体类，可以直接使用类名来标识
