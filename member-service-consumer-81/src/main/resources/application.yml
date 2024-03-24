@@ -1,0 +1,5 @@
+server:
+  port: 81 # 监听81端口
+spring:
+  application:
+    name: member-service-consumer-81

@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>e-commerce-center</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>e_commerce_center-common-api</artifactId>
+    <name>Archetype - e_commerce_center-common-api</name>
+    <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <!-- optional为true表示两个模块之间依赖不传递，也就是其他模块引入这个共用模块时，不传递这个模块的lombok依赖 -->
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+</project>
