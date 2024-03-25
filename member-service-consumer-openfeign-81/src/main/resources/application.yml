@@ -1,0 +1,19 @@
+server:
+  port: 81 # 监听81端口
+spring:
+  application:
+    name: member-service-consumer-openfeign-81
+eureka: # eureka客户端配置
+  client:
+    register-with-eureka: true # 将自己注册到eureka服务
+    fetch-registry: true # 发现服务功能，如果是集群，必须要能发现服务才能配合ribben进行负载均衡
+    service-url:
+      # 需要注册到两个服务，则只需要用逗号间隔
+      defaultZone: http://eureka9001.com:9001/eureka/, http://eureka9002.com:9002/eureka/
+## 以debug的形式输出MemberFeignService接口的日志
+#logging:
+#  level:
+#    com.sun.springcloud.service.MemberFeignService: debug
+#ribbon:
+#  ReadTimeout: 8000 # 从服务提供方获取到可用资源的全部时间
+#  ConnectionTimeout: 8000 # 两端建立连接时间
