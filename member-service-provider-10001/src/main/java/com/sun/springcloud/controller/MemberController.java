@@ -48,7 +48,7 @@ public class MemberController {
         Member member = memberService.queryMemberById(id);
 
         if (member != null) {
-            return Result.success("查询成功！", member);
+            return Result.success("查询成功！member-service-provider-10001", member);
         } else {
             return Result.error("402", "ID= " + id + "不存在");
         }

@@ -6,12 +6,12 @@
         <artifactId>e-commerce-center</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>member-service-consumer-81</artifactId>
-    <name>Archetype - member-service-consumer-80</name>
+    <artifactId>member-service-provider-10002</artifactId>
+    <name>Archetype - member-service-provider-10002</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
-        <!-- springboot web starter 用来监听端口-->
+        <!-- springboot web starter -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -28,6 +28,28 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+        <!-- druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <!-- 这里我们重新指定一下 version 因为父项目中没有对这个依赖进行版本仲裁-->
+            <version>1.1.13</version>
+        </dependency>
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- jdbc -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
         <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>

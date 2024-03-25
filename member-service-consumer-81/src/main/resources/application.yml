@@ -3,3 +3,10 @@ server:
 spring:
   application:
     name: member-service-consumer-81
+eureka: # eureka客户端配置
+  client:
+    register-with-eureka: true # 将自己注册到eureka服务
+    fetch-registry: true # 发现服务功能，如果是集群，必须要能发现服务才能配合ribben进行负载均衡
+    service-url:
+      # 需要注册到两个服务，则只需要用逗号间隔
+      defaultZone: http://eureka9001.com:9001/eureka/, http://eureka9002.com:9002/eureka/

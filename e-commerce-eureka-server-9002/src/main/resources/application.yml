@@ -1,0 +1,11 @@
+server:
+  port: 9002
+eureka: # 配置eureka-server
+  instance:
+    hostname: eureka9002.com # 服务实例名
+  client: # 因为以后可能有其他的eureka服务端，那是这个eureka服务就会既是客户端又是服务端，所以在这里配置一下作为客户端的配置
+    register-with-eureka: false # 不向注册中心注册自己
+    fetch-registry: false # 自己就是注册中心，所以不需要去检索服务
+    service-url:
+      # 注册到9001server
+      defaultZone: http://eureka9001.com:9001/eureka/ # 交互模块，查询服务和注册服务都需要依赖这个地址（就是注册这个）

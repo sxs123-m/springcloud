@@ -1,5 +1,6 @@
 package com.sun.springcloud.config;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -18,6 +19,7 @@ public class CustomizationBean {
      * @return
      */
     @Bean
+    @LoadBalanced // 负载均衡，默认使用轮询算法
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }

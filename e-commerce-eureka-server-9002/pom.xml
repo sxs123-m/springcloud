@@ -6,51 +6,45 @@
         <artifactId>e-commerce-center</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>member-service-consumer-81</artifactId>
-    <name>Archetype - member-service-consumer-80</name>
+    <artifactId>e-commerce-eureka-server-9002</artifactId>
+    <name>Archetype - e-commerce-eureka-server-9002</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
-        <!-- springboot web starter 用来监听端口-->
+
+        <!-- 引入 eureka-server -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <!-- 使用版本仲裁 -->
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <!-- 如果在子工程/模块指定了 version，则以指定为准 -->
         </dependency>
-        <!--
-        1. starter-actuator 是 springboot 程序的监控系统，可以实现健康检查，info 信息
-        等
-        2. 访问 http://localhost:10000/actuator 可以看到相关链接, 还可以做相关设置. -->
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
-        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
-        <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
         </dependency>
         <!-- 公共模块的jar包 -->
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>e_commerce_center-common-api</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <!-- 引入eureka的客户端场景启动器 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <!-- 使用版本仲裁 -->
         </dependency>
     </dependencies>
 </project>

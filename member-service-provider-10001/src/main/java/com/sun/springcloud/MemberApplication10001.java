@@ -2,6 +2,7 @@ package com.sun.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * Description:
@@ -10,9 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Create 2024/3/22 12:49
  * @Version 1.0
  */
+@EnableEurekaClient // 作为客户端启动Eureka
 @SpringBootApplication
-public class MemberApplication {
+public class MemberApplication10001 {
     public static void main(String[] args) {
-        SpringApplication.run(MemberApplication.class, args);
+        SpringApplication.run(MemberApplication10001.class, args);
     }
 }
