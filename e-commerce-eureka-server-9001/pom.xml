@@ -12,6 +12,8 @@
 
     <dependencies>
 
+        <!--引入zipkin-->
+        
         <!-- 引入 eureka-server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

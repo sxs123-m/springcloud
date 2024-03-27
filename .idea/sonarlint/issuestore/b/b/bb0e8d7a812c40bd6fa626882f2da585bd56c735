@@ -1,0 +1,8 @@
+
+~	java:S125"<This block of commented-out lines of code should be removed.(Ã­”ì8ö‡úËç1J$8a126b09-85a5-42cf-a630-c528a1c720c3
+~
+java:S1128";Remove this unused import 'com.netflix.loadbalancer.IRule'.(ºßİï8ø‡úËç1J$103bcf63-51bd-410b-b397-5199e71d68dc
+ƒ
+java:S1128"@Remove this unused import 'com.netflix.loadbalancer.RandomRule'.(¢ÕÏó8ø‡úËç1J$6359f652-383f-463c-9b04-787995e5f38c
+‹
+java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş8ø‡úËç1J$900194c8-f748-4fa5-a734-6a32ca6732fa

@@ -1,0 +1,31 @@
+server:
+  port: 20000
+spring:
+  application:
+    name: e-commerce-gateway
+  cloud:
+    gateway:
+      routes: # 配置路由， List<RouteDefinition> routes，是集合类型
+        - id: member_route01 # 路由id，唯一即可
+          uri: lb://member-service-provider # 断言匹配成功后将这个与/member/get/**拼接，这里的lb是负载均衡的协议，服务名需要小写
+          predicates:
+            - Path=/member/get/**
+        - id: member_route02 # 路由id，唯一即可
+          uri: lb://member-service-provider # 断言匹配成功后将这个与/member/save拼接，，这里的lb是负载均衡的协议，，服务名需要小写
+          predicates:
+            - Path=/member/save # 断言匹配成功后的完整路径是http://localhost:10001//member/save
+      discovery:
+        locator:
+          enabled: true # 启用服务发现
+
+# 配置eureka，作为客户端，有服务注册和服务发现功能
+eureka:
+#  instance:
+#    hostname: e-commerce-service
+  client:
+    register-with-eureka: true # 将自己注册到eureka服务
+    fetch-registry: true # 发现服务功能，如果是集群，必须要能发现服务才能配合ribben进行负载均衡
+    service-url:
+      defaultZone: http://eureka9001.com:9001/eureka/
+
+

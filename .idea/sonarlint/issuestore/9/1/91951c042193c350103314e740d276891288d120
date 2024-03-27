@@ -1,0 +1,10 @@
+
+~	java:S125"<This block of commented-out lines of code should be removed.(¯èøâ8ãíÊÈç1J$706c7cf5-f026-45bf-a599-9fa538407c45
+”
+java:S1128"QRemove this unused import 'org.springframework.cloud.gateway.route.RouteLocator'.(å€üØ8©«ßüç1J$d4d65016-28f9-4135-a40a-e1eca30fdbd2
+¢
+java:S1128"`Remove this unused import 'org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder'.(“›ó#8©«ßüç1J$71cc2494-165a-443b-acc2-e4a14536c293
+‹
+java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş8©«ßüç1J$4839cb4a-997d-4f05-8a8d-4eef00e6e885
+™
+java:S1128"QRemove this unused import 'org.springframework.context.annotation.Configuration'.(¬²Úäşÿÿÿÿ8©«ßüç1J$2d6fcec6-9064-46c5-90c0-ef946cdd9d6f

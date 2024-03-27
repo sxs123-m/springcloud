@@ -11,6 +11,12 @@
     <url>http://maven.apache.org</url>
 
     <dependencies>
+        <!--引入zipkin依赖，本身也包含了Sleuth-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
         <!-- springboot web starter -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

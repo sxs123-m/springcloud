@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: member-service-consumer-81
+  # 配置zipkin
+  zipkin:
+    base-url: http://127.0.0.1:9411 # 配置zipkin的地址，根据自己的实际情况配置
+  sleuth:
+    sampler:
+      probability: 1.0 # 配置采样率，1.0表示全部采集
 eureka: # eureka客户端配置
   client:
     register-with-eureka: true # 将自己注册到eureka服务

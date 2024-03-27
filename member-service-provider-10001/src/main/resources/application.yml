@@ -9,6 +9,12 @@ spring:
     url: jdbc:mysql://bj-cynosdbmysql-grp-71ax6pli.sql.tencentcdb.com:24169/e_commerce_center_db?useSSL=false&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: Ww*20021208002
+  # 配置zipkin
+  zipkin:
+    base-url: http://127.0.0.1:9411 # 配置zipkin的地址，根据自己的实际情况配置
+  sleuth:
+    sampler:
+      probability: 1.0 # 配置采样率，1.0表示全部采集
 mybatis:
   mapper-locations: classpath:mapper/*.xml # 扫描所有Mapper.xml
   type-aliases-package: com.sun.springcloud.entity # 扫描所有实体类，可以直接使用类名来标识
